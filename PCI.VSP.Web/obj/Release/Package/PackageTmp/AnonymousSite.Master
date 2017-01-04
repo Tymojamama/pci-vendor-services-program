@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnonymousSite.Master.cs" Inherits="PCI.VSP.Web.AnonymousSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vendor Services Program | Pension Consultants, Inc.</title>
+    <link href="<%= ResolveClientUrl("~/Styles/Site.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveClientUrl("~/Styles/Master.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="main-body">
+    <form runat="server">
+    <div id="main-container">
+        <div id="main-header-background">
+            <div id="main-header-container">
+                <div id="main-header-logos">
+                    <a href="<%= ResolveClientUrl("~/Vendor/Dashboard.aspx") %>"><img id="pci-logo" alt="PCI" src="<%= ResolveClientUrl("~/images/pcilogo.png") %>"/></a>
+                    <div id="main-header-menu">
+                        <div class="main-header-menu-item"  onclick="location.replace('http://www.pension-consultants.com/')">
+                            <p>&lt;&lt; Back</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <%--<div id="main-banner"></div>--%>
+            <div id="NavLoginViewDiv">
+                <asp:ContentPlaceHolder ID="NavContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+    <div class="small-width">
+        <div id="main-footer">
+            <div id="main-footer-content">
+                <p class="right">
+                    <span style="font-weight: bolder; display: inline-block;">Pension Consultants, Inc.</span>
+                    <br />
+                    300 South Campbell<br />
+                    Springfield, MO 65806<br />
+                    <span style="font-weight: bold;">417.889.4918</span>
+                </p>
+                <p class="left">
+                    <br />
+                    ©<%= DateTime.Now.Year %> Pension Consultants, Inc. All Rights Reserved. Pension Consultants is a Registered
+                    Invesment Advisor. Securities offered through Securities Service Network, Inc. Member
+                    FINRA/SIPC. Securities are licensed in AR, CA, IL, IA, KS, MO, NE, OK and TX.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

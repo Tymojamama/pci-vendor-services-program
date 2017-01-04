@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PCI.VSP.BaselineQuestionImport.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CRMDeploymentType" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="CRMDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CRMUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">VSP</Value>
+    </Setting>
+    <Setting Name="CRMPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Account1!</Value>
+    </Setting>
+    <Setting Name="CRMUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://pc.pension-consultants.com/MSCRMServices/2007/SPLA/CrmDiscoveryService.asmx</Value>
+    </Setting>
+    <Setting Name="CRMOrganization" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PC</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

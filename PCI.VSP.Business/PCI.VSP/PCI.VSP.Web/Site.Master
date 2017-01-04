@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PCI.VSP.Web.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Vendor Services Program | Pension Consultants, Inc.</title>
+    <link href="<%= ResolveClientUrl("~/Styles/Site.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveClientUrl("~/Styles/Master.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        <script type="text/javascript" id="GlobalScriptMaster">
+            function CloseIFrame() {
+                HideModalWindow(true);
+            }
+
+            
+    </script>
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src='<%= ResolveClientUrl("~/scripts/jquery-1.7.2.min.js") %>'></script>
+    <script src="../Scripts/ModalWindow.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $().ready(function () {
+            $("#year").text((new Date).getFullYear());
+        });
+
+        function launchModalWindowMaster(windowToOpen) {
+            var url = null;
+            var windowName = null;
+
+            switch (windowToOpen) {
+                case 'VendorProfile':
+                    url = '<%= ResolveClientUrl("~/Vendor/ProfileDialog.aspx") %>';
+                    windowName = 'Vendor Profile';
+                    break;
+                default:
+                    return;
+            }
+
+            ShowModalWindow(url, 768, 1024);
+        }
+    </script>
+    <style type="text/css">
+        #NavLoginViewDiv a
+        {
+            color: #EBE8E6;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div id="main-container">
+        <div id="main-header-background">
+            <div id="main-header-container">
+                <div id="main-header-logos">
+                    <img id="vsp-logo" alt="VSP" src="<%= ResolveClientUrl("~/images/vsplogo.png") %>" onclick="location.replace('<%= ResolveClientUrl("~/Default.aspx") %>')"/>
+                    <div id="main-header-menu">
+                        <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="VendorAdmin,VendorAgent">
+                                    <ContentTemplate>
+                                        <div class="main-header-menu-item" onclick="location.replace('<%= ResolveClientUrl("~/Default.aspx") %>')">
+                                            <p>Home</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/ProfileDialog.aspx") %>')">
+                                            <p>Profile</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/Products.aspx") %>')">
+                                            <p>Products</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/ProjectInquiries.aspx") %>')">
+                                            <p>Inquiries</p>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <asp:LoginView ID="NavLoginView2" runat="server" EnableViewState="false">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="VendorAdmin,SystemUser">
+                                    <ContentTemplate>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/Admin/UserManagement.aspx") %>')">
+                                            <p>Users</p>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Account/Logout.aspx") %>')">
+                            <p>Log Out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="main-banner"></div>
+            <div id="NavLoginViewDiv">
+                <asp:ContentPlaceHolder ID="NavContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="MainModalWindow" style="width: 100%; height: 100%; display: none; position: absolute;
+        left: 0px; top: 0px;">
+        <div class="blackOut">
+        </div>
+        <div id="ModalWindow" class="ModalWindow" style="width: 280px; height: 125px; left: 191.5px; top: 21px;">
+            <iframe id="iWindow" src="about:blank" height="125px" width="280px" frameborder="0" ></iframe>
+        </div>
+    </div>
+    </form>
+    <div id="main-footer">
+        <div id="main-footer-content">
+            <p class="left">
+                <br />
+                ©<%= DateTime.Now.Year %> Pension Consultants, Inc. All Rights Reserved. Pension Consultants is a Registered
+                Invesment Advisor. Securities offered through Securities Service Network, Inc. Member
+                FINRA/SIPC. Securities are licensed in AR, CA, IL, IA, KS, MO, NE, OK and TX. Website
+                by Tricension.
+            </p>
+            <p class="right">
+                <span style="font-weight: bolder; display: inline-block;">Pension Consultants, Inc.</span>
+                <br />
+                300 South Campbell<br />
+                Springfield, MO 65806<br />
+                <span style="font-weight: bold;">417.889.4918</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

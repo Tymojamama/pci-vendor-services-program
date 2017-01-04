@@ -1,0 +1,10 @@
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PCI.VSP.Services.dll.config
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PCI.VSP.Services.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PCI.VSP.Services.pdb
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\microsoft.crm.sdk.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\microsoft.crm.sdktypeproxy.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PCI.VSP.Data.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PCI.VSP.Data.pdb
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.csprojResolveAssemblyReference.cache
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.pdb

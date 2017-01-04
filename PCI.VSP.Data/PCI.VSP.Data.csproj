@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD784057-7400-4CD1-B3F8-0009B7C65F73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCI.VSP.Data</RootNamespace>
+    <AssemblyName>PCI.VSP.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_AuthOverride</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="microsoft.crm.sdk">
+      <HintPath>..\References\microsoft.crm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.crm.sdktypeproxy, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\microsoft.crm.sdktypeproxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DataConstants.cs" />
+    <Compile Include="Classes\VendorProductSummary.cs" />
+    <Compile Include="CRM\DataLogic\AccountDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\AnnotationDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\ClientProjectDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\ClientQuestionDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\DocumentTemplateDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\DocumentTypeDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\InvestmentAssetClassDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\PlanAccountDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\PlanAccountServiceProviderDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\PlanAccountServiceProviderTypeDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\ProjectVendorDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\ContactDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\CrmDiscoveryService.cs" />
+    <Compile Include="CRM\DataLogic\CrmHelper.cs" />
+    <Compile Include="CRM\DataLogic\QuestionCategoryDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\QuestionFunctionDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\TemplateQuestionDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\VendorProductDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\VendorQuestionDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\VendorQuestionHistoryDataLogic.cs" />
+    <Compile Include="CRM\Model\Annotation.cs" />
+    <Compile Include="CRM\Model\ClientProject.cs" />
+    <Compile Include="CRM\Model\ClientQuestion.cs" />
+    <Compile Include="CRM\Model\CustomExceptions.cs" />
+    <Compile Include="CRM\DataLogic\ProductDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\QuestionDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\ServiceBroker.cs" />
+    <Compile Include="CRM\DataLogic\ServiceObjectBase.cs" />
+    <Compile Include="CRM\DataLogic\SystemUserDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\TemplateDataLogic.cs" />
+    <Compile Include="CRM\DataLogic\TokenBroker.cs" />
+    <Compile Include="CRM\Model\Account.cs" />
+    <Compile Include="CRM\Model\Client.cs" />
+    <Compile Include="CRM\Model\ClientRep.cs" />
+    <Compile Include="CRM\Model\Contact.cs" />
+    <Compile Include="CRM\Model\DocumentTemplate.cs" />
+    <Compile Include="CRM\Model\DocumentType.cs" />
+    <Compile Include="CRM\Model\EntityBase.cs" />
+    <Compile Include="CRM\Model\InvestmentAssetClass.cs" />
+    <Compile Include="CRM\Model\PlanAccount.cs" />
+    <Compile Include="CRM\Model\PlanAccountServiceProvider.cs" />
+    <Compile Include="CRM\Model\PlanAccountServiceProviderType.cs" />
+    <Compile Include="CRM\Model\ProjectVendor.cs" />
+    <Compile Include="CRM\Model\QuestionFunction.cs" />
+    <Compile Include="CRM\Model\RequestContracts.cs" />
+    <Compile Include="CRM\Model\Product.cs" />
+    <Compile Include="CRM\Model\Question.cs" />
+    <Compile Include="CRM\Model\QuestionCategory.cs" />
+    <Compile Include="CRM\Model\SystemUser.cs" />
+    <Compile Include="CRM\Model\Template.cs" />
+    <Compile Include="CRM\Model\TemplateQuestion.cs" />
+    <Compile Include="CRM\Model\Vendor.cs" />
+    <Compile Include="CRM\Model\VendorAgent.cs" />
+    <Compile Include="CRM\Model\VendorProduct.cs" />
+    <Compile Include="CRM\Model\VendorQuestion.cs" />
+    <Compile Include="CRM\Model\Enums.cs" />
+    <Compile Include="CRM\Model\VendorQuestionHistory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AD\" />
+    <Folder Include="SharePoint\DataLogic\" />
+    <Folder Include="SharePoint\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="CRM\Snippets\EntitySnippet.snippet" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

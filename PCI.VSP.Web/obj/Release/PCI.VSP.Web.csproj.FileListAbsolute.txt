@@ -1,0 +1,13 @@
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Web.dll.config
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Web.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Web.pdb
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\microsoft.crm.sdk.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Data.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Services.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\Telerik.Web.UI.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\Microsoft.Crm.SdkTypeProxy.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Data.pdb
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\bin\PCI.VSP.Services.pdb
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\obj\Release\PCI.VSP.Web.csprojResolveAssemblyReference.cache
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\obj\Release\PCI.VSP.Web.dll
+C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Web\obj\Release\PCI.VSP.Web.pdb

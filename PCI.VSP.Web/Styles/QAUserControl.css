@@ -1,0 +1,158 @@
+﻿.blackOut2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+    -moz-opacity: 0.50;
+    z-index: 103;
+}
+.ModalWindow2 {
+    position: absolute;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #D1D1D1;
+    z-index: 104;
+    border-image: initial;
+    margin: 0px auto;
+}
+    
+.outerDiv {
+    width: 100%; 
+    height: 100%; 
+    display: none; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px;
+}
+    
+.innerDiv {
+    width: 300px; 
+    /*height: 125px; */
+    left: 191.5px; 
+    top: 121px;
+}
+
+.FeeTierDiv {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    min-height: 100px;
+    width: 95%;
+}
+
+.FeeTierLabel {
+    display: block;
+    width: 60px;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+.FeeTierDiv input {
+    display: block;
+    margin-left: 15px;
+}
+
+.FeeTierDiv button {
+    display: block;
+    margin-left: 15px;
+}
+    
+.FeeTierTotals {
+    display: none;
+}
+
+.RemoveTierButton {
+    display: block;
+}
+    
+button {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 5px 0;
+    height: 30px;
+    border: 1px solid #cacaca;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+.question-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    min-height: 100px;
+    width: 100%;
+    float: left;
+}
+
+.question-container:hover {
+    border: 2px solid #b1b1b1;
+}
+
+.question-number {
+    display: inline-block;
+    width: 30px;
+    height: 100px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+.question-number p {
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.question-subcontainer {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 35px);
+    vertical-align: top;
+}
+
+.question-wording {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.question-wording p {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.question-response {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.question-response input {
+    border: 1px solid #ccc;
+    display: inline-block;
+}

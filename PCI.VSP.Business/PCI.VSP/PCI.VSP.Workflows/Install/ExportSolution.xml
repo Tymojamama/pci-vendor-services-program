@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Register 
+		  LogFile = "Plugin Registration Log.txt"
+		  Server = "http://trisplaapp01"
+		  Org = "PensionConsultingInc"
+		  Domain="TRICENSION"
+		  UserName="house.account"
+		  >	
+	
+	<Solution SourceType="0" Assembly="PCI.VSP.Workflows.dll">
+		<WorkflowTypes>
+			<WorkflowType TypeName="PCI.VSP.Workflows.VendorProfileThreshold" FriendlyName="VSP Vendor Profile Threshold Workflow"></WorkflowType>
+		</WorkflowTypes>
+
+	</Solution>
+</Register>

@@ -1,0 +1,188 @@
+﻿html {
+    height: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f4f6;
+    min-height: 100%;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: Black;
+}
+
+#main-body {
+    min-height: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+#main-body form {
+    width: 100%;
+}
+
+#main-body table {
+    margin: 0 auto;
+}
+
+#main-container {
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 102px;
+    position: relative;
+}
+
+#main-header-background {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #0e2e47;
+}
+
+#main-header-container {
+    height: 100%;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#main-header-logos {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#main-header-logos #pci-logo {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#main-header-logos #pci-logo:hover {
+
+}
+
+#main-content {
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+#main-header-menu {
+    height: 100%;
+    float: right;
+    display: block;
+    text-align: center;
+}
+
+.main-header-menu-item {
+    height: 100%;
+    line-height: 100%;
+    vertical-align: central;
+    background: #0e2e47;
+    color: #ffffff;
+    min-width: 50px;
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease ;
+}
+
+.main-header-menu-item:hover {
+    color: #a3a8aa;
+    cursor: pointer;
+
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease ;
+}
+
+#main-header-menu-item p {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#main-footer {
+    width: 100%;
+    max-height: 102px;
+    background-color: #f1f4f6;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+#main-footer p {
+    color: #494a4b;
+    text-align: left;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+#main-footer-content {
+    max-width: 100%;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+#main-footer-content .main-footer-disclosure {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#main-footer-content .main-footer-contact {
+    display: inline-block;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+#main-banner {
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background: no-repeat center center cover;
+    max-width: 100%;
+    height: 125px;
+    width: 878px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+
+    #main-footer p {
+        font-size: 10px;
+    }
+
+    #main-header-menu {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    #main-footer p {
+        font-size: 7px;
+        padding-left: 0;
+    }
+
+}

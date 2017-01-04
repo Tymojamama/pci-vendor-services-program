@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteBase.Master" AutoEventWireup="true" CodeBehind="VMMaster.master.cs" Inherits="PCI.VSP.Web.CrmIFrames.VendorMonitoring.VMMaster" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Src="../../Controls/QAUserControl.ascx" TagName="QAUserControl" TagPrefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <base target="_self" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <asp:HiddenField ID="hfType" runat="server" />
+    <div style="vertical-align: top;">
+        <table>
+            <tr>
+                <td colspan="2">
+                
+                    <div class="contentheader" style="background-position: inherit; padding-left: 18px;">
+                        <div class="contentheadertext" style="float: inherit;">
+                            <asp:ContentPlaceHolder ID="TitleContent" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="silverdivider"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style='vertical-align:top;'>
+                    <asp:Button ID="btnCopyInvestments" runat="server" Text="" OnClick="btnCopyInvestments_Click" />
+                    <asp:Repeater ID="rptCategories" runat="server">
+                        <HeaderTemplate><table></HeaderTemplate>
+                        <ItemTemplate>
+                            <tr>
+                                <td style='<%# (int)Eval("SubItemLevel") > 0 ? "padding-left:" + (int)Eval("SubItemLevel") + "0px;" : "" %>'>
+                                    <asp:HiddenField ID="hdnFunctionId" runat="server" Value='<%# Eval("FunctionId") %>' />
+                                    <asp:HiddenField ID="hdnCategoryId" runat="server" Value='<%# Eval("CategoryId") %>' />
+                                    <asp:CheckBox ID="chkCopy" CssClass='<%# "inv-copy-chk" + ((int)Eval("SubItemLevel") == 0 ? " mstr" : "") %>' runat="server" Visible='<%# ConfigurationManager.AppSettings["InvestmentManagementId"].ToLower() == Eval("CategoryId").ToString().ToLower() %>' />
+                                    <asp:LinkButton ID='category' runat="server" CommandName='<%# (int)Eval("Type")%>' CommandArgument='<%# Eval("FunctionId") %>' Text='<%# Eval("DisplayName")%>' OnClick="category_Click" />
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                        <FooterTemplate></table></FooterTemplate>
+                    </asp:Repeater>
+                </td>
+                <td>
+                    <asp:Label ID="lblText" runat="server" Text="" ForeColor="Red" />
+                    <uc1:QAUserControl ID="QAUserControl1" runat="server" Visible='false' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.inv-copy-chk.mstr input').on('click', function () {
+                var checked = $(this).prop('checked');
+                $('.inv-copy-chk input').prop('checked', checked);
+            });
+        });
+    </script>
+</asp:Content>

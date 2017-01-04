@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VSMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="VSMModelStoreContainer">
+          <EntitySet Name="Fee" EntityType="VSMModel.Store.Fee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FrequentlyUsedProjectQuestions" EntityType="VSMModel.Store.FrequentlyUsedProjectQuestions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InvestmentAssumptions" EntityType="VSMModel.Store.InvestmentAssumptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlanAssumptions" EntityType="VSMModel.Store.PlanAssumptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendor" EntityType="VSMModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VendorAnswers" EntityType="VSMModel.Store.VendorAnswers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VendorAssumptions" EntityType="VSMModel.Store.VendorAssumptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VendorProduct" EntityType="VSMModel.Store.VendorProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VendorQuestions" EntityType="VSMModel.Store.VendorQuestions" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Fee_Fee" Association="VSMModel.Store.FK_Fee_Fee">
+            <End Role="Fee" EntitySet="Fee" />
+            <End Role="Fee1" EntitySet="Fee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Fee_PlanAssumptions" Association="VSMModel.Store.FK_Fee_PlanAssumptions">
+            <End Role="PlanAssumptions" EntitySet="PlanAssumptions" />
+            <End Role="Fee" EntitySet="Fee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlanAssumptions_VendorQuestions" Association="VSMModel.Store.FK_PlanAssumptions_VendorQuestions">
+            <End Role="VendorQuestions" EntitySet="VendorQuestions" />
+            <End Role="PlanAssumptions" EntitySet="PlanAssumptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VendorAnswers_VendorProduct" Association="VSMModel.Store.FK_VendorAnswers_VendorProduct">
+            <End Role="VendorProduct" EntitySet="VendorProduct" />
+            <End Role="VendorAnswers" EntitySet="VendorAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VendorAnswers_VendorQuestions" Association="VSMModel.Store.FK_VendorAnswers_VendorQuestions">
+            <End Role="VendorQuestions" EntitySet="VendorQuestions" />
+            <End Role="VendorAnswers" EntitySet="VendorAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VendorProduct_Vendor" Association="VSMModel.Store.FK_VendorProduct_Vendor">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="VendorProduct" EntitySet="VendorProduct" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Fee">
+          <Key>
+            <PropertyRef Name="FeeID" />
+          </Key>
+          <Property Name="FeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FeeCategoryID" Type="int" Nullable="false" />
+          <Property Name="FeeTypeID" Type="int" Nullable="false" />
+          <Property Name="ParentFeeID" Type="int" />
+          <Property Name="PlanAssumptionID" Type="int" />
+          <Property Name="FeeDescription" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FrequentlyUsedProjectQuestions">
+          <Key>
+            <PropertyRef Name="FrequentlyUsedProjectQuestionID" />
+          </Key>
+          <Property Name="FrequentlyUsedProjectQuestionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionDataTypeID" Type="int" Nullable="false" />
+          <Property Name="Question" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="VendorVersion" Type="varchar" MaxLength="1000" />
+          <Property Name="ReportLabel" Type="varchar" MaxLength="500" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvestmentAssumptions">
+          <Key>
+            <PropertyRef Name="InvestmentAssumptionID" />
+          </Key>
+          <Property Name="InvestmentAssumptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AssetClassID" Type="int" Nullable="false" />
+          <Property Name="AssetFund" Type="varchar" MaxLength="255" />
+          <Property Name="AssetSymbol" Type="varchar" MaxLength="100" />
+          <Property Name="Assets" Type="money" />
+          <Property Name="Participants" Type="int" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="IsTarget" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlanAssumptions">
+          <Key>
+            <PropertyRef Name="PlanAssumptionID" />
+          </Key>
+          <Property Name="PlanAssumptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorQuestionID" Type="int" />
+          <Property Name="QuestionDataTypeID" Type="int" Nullable="false" />
+          <Property Name="Assumption" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorName" Type="varchar" MaxLength="100" />
+          <Property Name="MainPhone" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="WebsiteURL" Type="varchar" MaxLength="200" />
+          <Property Name="FullAddress" Type="varchar" MaxLength="200" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Address2" Type="varchar" MaxLength="100" />
+          <Property Name="City" Type="varchar" MaxLength="100" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="20" />
+          <Property Name="BeganRecordkeeping" Type="varchar" MaxLength="20" />
+          <Property Name="ParentCompany" Type="varchar" MaxLength="100" />
+          <Property Name="TypeOfVendor" Type="varchar" MaxLength="50" />
+          <Property Name="NumDedicatedRetirementStaff" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="VendorAnswers">
+          <Key>
+            <PropertyRef Name="VendorAnswerID" />
+          </Key>
+          <Property Name="VendorAnswerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorQuestionID" Type="int" Nullable="false" />
+          <Property Name="VendorProductID" Type="int" Nullable="false" />
+          <Property Name="Answer1" Type="varchar" MaxLength="255" />
+          <Property Name="AnswerBeforeImport" Type="varchar" MaxLength="255" />
+          <Property Name="LastUpdateBy" Type="int" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+          <Property Name="VendorCommentToPCI" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdateByVendorPCI" Type="int" />
+          <Property Name="LastUpdateDateVendorPCI" Type="datetime" />
+          <Property Name="PCICommentToVendor" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdateByPCIVendor" Type="int" />
+          <Property Name="LastUpdateDatePCIVendor" Type="datetime" />
+          <Property Name="VendorCommentToPlanSponsor" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdateByVendorPlanSponsor" Type="int" />
+          <Property Name="LastUpdateDateVendorPlanSponsor" Type="datetime" />
+          <Property Name="PCICommentToPlanSponsor" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdateByPCIPlanSponsor" Type="int" />
+          <Property Name="LastUpdateDatePCIPlanSponsor" Type="datetime" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VendorAssumptions">
+          <Key>
+            <PropertyRef Name="VendorAssumptionID" />
+          </Key>
+          <Property Name="VendorAssumptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorAssumptionCategoryID" Type="int" Nullable="false" />
+          <Property Name="QuestionDataTypeID" Type="int" Nullable="false" />
+          <Property Name="Assumption" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="SortOrder" Type="int" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VendorProduct">
+          <Key>
+            <PropertyRef Name="VendorProductID" />
+          </Key>
+          <Property Name="VendorProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="255" />
+          <Property Name="Comments" Type="varchar" MaxLength="255" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VendorQuestions">
+          <Key>
+            <PropertyRef Name="VendorQuestionID" />
+          </Key>
+          <Property Name="VendorQuestionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendorQuestionCategoryID" Type="int" Nullable="false" />
+          <Property Name="QuestionDataTypeID" Type="int" />
+          <Property Name="VendorQuestion" Type="varchar" MaxLength="4000" />
+          <Property Name="VendorVersion" Type="varchar" MaxLength="1000" />
+          <Property Name="ClientVersion" Type="varchar" MaxLength="1000" />
+          <Property Name="ReportLabel" Type="varchar" MaxLength="500" />
+          <Property Name="VSM" Type="varchar" MaxLength="255" />
+          <Property Name="PCIComment" Type="varchar" MaxLength="255" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="HideFromVendor" Type="bit" Nullable="false" />
+          <Property Name="TopQuestion" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VSM.dbo.vwVendorProductQuestions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VSM.dbo.vwVendorQuestionsAndCategories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <Association Name="FK_Fee_Fee">
+          <End Role="Fee" Type="VSMModel.Store.Fee" Multiplicity="0..1" />
+          <End Role="Fee1" Type="VSMModel.Store.Fee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="Fee1">
+              <PropertyRef Name="ParentFeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Fee_PlanAssumptions">
+          <End Role="PlanAssumptions" Type="VSMModel.Store.PlanAssumptions" Multiplicity="0..1" />
+          <End Role="Fee" Type="VSMModel.Store.Fee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanAssumptions">
+              <PropertyRef Name="PlanAssumptionID" />
+            </Principal>
+            <Dependent Role="Fee">
+              <PropertyRef Name="PlanAssumptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlanAssumptions_VendorQuestions">
+          <End Role="VendorQuestions" Type="VSMModel.Store.VendorQuestions" Multiplicity="0..1" />
+          <End Role="PlanAssumptions" Type="VSMModel.Store.PlanAssumptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorQuestions">
+              <PropertyRef Name="VendorQuestionID" />
+            </Principal>
+            <Dependent Role="PlanAssumptions">
+              <PropertyRef Name="VendorQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VendorAnswers_VendorProduct">
+          <End Role="VendorProduct" Type="VSMModel.Store.VendorProduct" Multiplicity="1" />
+          <End Role="VendorAnswers" Type="VSMModel.Store.VendorAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorProduct">
+              <PropertyRef Name="VendorProductID" />
+            </Principal>
+            <Dependent Role="VendorAnswers">
+              <PropertyRef Name="VendorProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VendorAnswers_VendorQuestions">
+          <End Role="VendorQuestions" Type="VSMModel.Store.VendorQuestions" Multiplicity="1" />
+          <End Role="VendorAnswers" Type="VSMModel.Store.VendorAnswers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorQuestions">
+              <PropertyRef Name="VendorQuestionID" />
+            </Principal>
+            <Dependent Role="VendorAnswers">
+              <PropertyRef Name="VendorQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VendorProduct_Vendor">
+          <End Role="Vendor" Type="VSMModel.Store.Vendor" Multiplicity="1" />
+          <End Role="VendorProduct" Type="VSMModel.Store.VendorProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorProduct">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'VSM.dbo.vwVendorProductAnswers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="vwVendorProductAnswers">
+        <Property Name="VendorQuestionID" Type="int" />
+        <Property Name="VendorProductID" Type="int" />
+        <Property Name="Answer1" Type="varchar" MaxLength="255" />
+        <Property Name="Active" Type="bit" />
+        <Property Name="LastUpdateBy" Type="int" />
+        <Property Name="LastUpdateDate" Type="datetime" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VSMModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="VSMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Vendors" EntityType="VSMModel.Vendor" />
+          <EntitySet Name="VendorAnswers" EntityType="VSMModel.VendorAnswer" />
+          <EntitySet Name="VendorProducts" EntityType="VSMModel.VendorProduct" />
+          <EntitySet Name="VendorQuestions" EntityType="VSMModel.VendorQuestion" />
+          <AssociationSet Name="FK_VendorProduct_Vendor" Association="VSMModel.FK_VendorProduct_Vendor">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="VendorProduct" EntitySet="VendorProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VendorAnswers_VendorProduct" Association="VSMModel.FK_VendorAnswers_VendorProduct">
+            <End Role="VendorProduct" EntitySet="VendorProducts" />
+            <End Role="VendorAnswers" EntitySet="VendorAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VendorAnswers_VendorQuestions" Association="VSMModel.FK_VendorAnswers_VendorQuestions">
+            <End Role="VendorQuestions" EntitySet="VendorQuestions" />
+            <End Role="VendorAnswers" EntitySet="VendorAnswers" />
+          </AssociationSet>
+          <EntitySet Name="Fees" EntityType="VSMModel.Fee" />
+          <EntitySet Name="FrequentlyUsedProjectQuestions" EntityType="VSMModel.FrequentlyUsedProjectQuestion" />
+          <EntitySet Name="InvestmentAssumptions" EntityType="VSMModel.InvestmentAssumption" />
+          <EntitySet Name="PlanAssumptions" EntityType="VSMModel.PlanAssumption" />
+          <EntitySet Name="VendorAssumptions" EntityType="VSMModel.VendorAssumption" />
+          <AssociationSet Name="FK_Fee_Fee" Association="VSMModel.FK_Fee_Fee">
+            <End Role="Fee" EntitySet="Fees" />
+            <End Role="Fee1" EntitySet="Fees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Fee_PlanAssumptions" Association="VSMModel.FK_Fee_PlanAssumptions">
+            <End Role="PlanAssumption" EntitySet="PlanAssumptions" />
+            <End Role="Fee" EntitySet="Fees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlanAssumptions_VendorQuestions" Association="VSMModel.FK_PlanAssumptions_VendorQuestions">
+            <End Role="VendorQuestion" EntitySet="VendorQuestions" />
+            <End Role="PlanAssumption" EntitySet="PlanAssumptions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="MainPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="WebsiteURL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="FullAddress" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="ZipCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BeganRecordkeeping" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ParentCompany" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TypeOfVendor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NumDedicatedRetirementStaff" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="VendorAnswer">
+          <Key>
+            <PropertyRef Name="VendorAnswerID" />
+          </Key>
+          <Property Name="VendorAnswerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorQuestionID" Type="Int32" Nullable="false" />
+          <Property Name="VendorProductID" Type="Int32" Nullable="false" />
+          <Property Name="Answer1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="AnswerBeforeImport" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdateBy" Type="Int32" />
+          <Property Name="LastUpdateDate" Type="DateTime" />
+          <Property Name="VendorCommentToPCI" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdateByVendorPCI" Type="Int32" />
+          <Property Name="LastUpdateDateVendorPCI" Type="DateTime" />
+          <Property Name="PCICommentToVendor" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdateByPCIVendor" Type="Int32" />
+          <Property Name="LastUpdateDatePCIVendor" Type="DateTime" />
+          <Property Name="VendorCommentToPlanSponsor" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdateByVendorPlanSponsor" Type="Int32" />
+          <Property Name="LastUpdateDateVendorPlanSponsor" Type="DateTime" />
+          <Property Name="PCICommentToPlanSponsor" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdateByPCIPlanSponsor" Type="Int32" />
+          <Property Name="LastUpdateDatePCIPlanSponsor" Type="DateTime" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="VendorProduct" Relationship="VSMModel.FK_VendorAnswers_VendorProduct" FromRole="VendorAnswers" ToRole="VendorProduct" />
+          <NavigationProperty Name="VendorQuestion" Relationship="VSMModel.FK_VendorAnswers_VendorQuestions" FromRole="VendorAnswers" ToRole="VendorQuestions" />
+        </EntityType>
+        <EntityType Name="VendorProduct">
+          <Key>
+            <PropertyRef Name="VendorProductID" />
+          </Key>
+          <Property Name="VendorProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Comments" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Vendor" Relationship="VSMModel.FK_VendorProduct_Vendor" FromRole="VendorProduct" ToRole="Vendor" />
+        </EntityType>
+        <EntityType Name="VendorQuestion">
+          <Key>
+            <PropertyRef Name="VendorQuestionID" />
+          </Key>
+          <Property Name="VendorQuestionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorQuestionCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="QuestionDataTypeID" Type="Int32" />
+          <Property Name="VendorQuestion1" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="VendorVersion" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="ClientVersion" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="ReportLabel" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="VSM" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="PCIComment" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="HideFromVendor" Type="Boolean" Nullable="false" />
+          <Property Name="TopQuestion" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_VendorProduct_Vendor">
+          <End Role="Vendor" Type="VSMModel.Vendor" Multiplicity="1" />
+          <End Role="VendorProduct" Type="VSMModel.VendorProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorProduct">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VendorAnswers_VendorProduct">
+          <End Role="VendorProduct" Type="VSMModel.VendorProduct" Multiplicity="1" />
+          <End Role="VendorAnswers" Type="VSMModel.VendorAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorProduct">
+              <PropertyRef Name="VendorProductID" />
+            </Principal>
+            <Dependent Role="VendorAnswers">
+              <PropertyRef Name="VendorProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VendorAnswers_VendorQuestions">
+          <End Role="VendorQuestions" Type="VSMModel.VendorQuestion" Multiplicity="1" />
+          <End Role="VendorAnswers" Type="VSMModel.VendorAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorQuestions">
+              <PropertyRef Name="VendorQuestionID" />
+            </Principal>
+            <Dependent Role="VendorAnswers">
+              <PropertyRef Name="VendorQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Fee">
+          <Key>
+            <PropertyRef Name="FeeID" />
+          </Key>
+          <Property Type="Int32" Name="FeeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FeeCategoryID" Nullable="false" />
+          <Property Type="Int32" Name="FeeTypeID" Nullable="false" />
+          <Property Type="Int32" Name="ParentFeeID" />
+          <Property Type="Int32" Name="PlanAssumptionID" />
+          <Property Type="String" Name="FeeDescription" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SortOrder" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+          <NavigationProperty Name="Fee1" Relationship="VSMModel.FK_Fee_Fee" FromRole="Fee" ToRole="Fee1" />
+          <NavigationProperty Name="Fee2" Relationship="VSMModel.FK_Fee_Fee" FromRole="Fee1" ToRole="Fee" />
+          <NavigationProperty Name="PlanAssumption" Relationship="VSMModel.FK_Fee_PlanAssumptions" FromRole="Fee" ToRole="PlanAssumption" />
+        </EntityType>
+        <EntityType Name="FrequentlyUsedProjectQuestion">
+          <Key>
+            <PropertyRef Name="FrequentlyUsedProjectQuestionID" />
+          </Key>
+          <Property Type="Int32" Name="FrequentlyUsedProjectQuestionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="QuestionDataTypeID" Nullable="false" />
+          <Property Type="String" Name="Question" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VendorVersion" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReportLabel" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SortOrder" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvestmentAssumption">
+          <Key>
+            <PropertyRef Name="InvestmentAssumptionID" />
+          </Key>
+          <Property Type="Int32" Name="InvestmentAssumptionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AssetClassID" Nullable="false" />
+          <Property Type="String" Name="AssetFund" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AssetSymbol" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Assets" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="Participants" />
+          <Property Type="Int32" Name="SortOrder" />
+          <Property Type="Boolean" Name="IsTarget" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlanAssumption">
+          <Key>
+            <PropertyRef Name="PlanAssumptionID" />
+          </Key>
+          <Property Type="Int32" Name="PlanAssumptionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VendorQuestionID" />
+          <Property Type="Int32" Name="QuestionDataTypeID" Nullable="false" />
+          <Property Type="String" Name="Assumption" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SortOrder" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+          <NavigationProperty Name="VendorQuestion" Relationship="VSMModel.FK_PlanAssumptions_VendorQuestions" FromRole="PlanAssumption" ToRole="VendorQuestion" />
+        </EntityType>
+        <EntityType Name="VendorAssumption">
+          <Key>
+            <PropertyRef Name="VendorAssumptionID" />
+          </Key>
+          <Property Type="Int32" Name="VendorAssumptionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VendorAssumptionCategoryID" Nullable="false" />
+          <Property Type="Int32" Name="QuestionDataTypeID" Nullable="false" />
+          <Property Type="String" Name="Assumption" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SortOrder" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Fee_Fee">
+          <End Type="VSMModel.Fee" Role="Fee" Multiplicity="0..1" />
+          <End Type="VSMModel.Fee" Role="Fee1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fee">
+              <PropertyRef Name="FeeID" />
+            </Principal>
+            <Dependent Role="Fee1">
+              <PropertyRef Name="ParentFeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Fee_PlanAssumptions">
+          <End Type="VSMModel.PlanAssumption" Role="PlanAssumption" Multiplicity="0..1" />
+          <End Type="VSMModel.Fee" Role="Fee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanAssumption">
+              <PropertyRef Name="PlanAssumptionID" />
+            </Principal>
+            <Dependent Role="Fee">
+              <PropertyRef Name="PlanAssumptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlanAssumptions_VendorQuestions">
+          <End Type="VSMModel.VendorQuestion" Role="VendorQuestion" Multiplicity="0..1" />
+          <End Type="VSMModel.PlanAssumption" Role="PlanAssumption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VendorQuestion">
+              <PropertyRef Name="VendorQuestionID" />
+            </Principal>
+            <Dependent Role="PlanAssumption">
+              <PropertyRef Name="VendorQuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VSMModelStoreContainer" CdmEntityContainer="VSMEntities">
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="VSMModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="MainPhone" ColumnName="MainPhone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="BeganRecordkeeping" ColumnName="BeganRecordkeeping" />
+                <ScalarProperty Name="ParentCompany" ColumnName="ParentCompany" />
+                <ScalarProperty Name="TypeOfVendor" ColumnName="TypeOfVendor" />
+                <ScalarProperty Name="NumDedicatedRetirementStaff" ColumnName="NumDedicatedRetirementStaff" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorAnswers">
+            <EntityTypeMapping TypeName="VSMModel.VendorAnswer">
+              <MappingFragment StoreEntitySet="VendorAnswers">
+                <ScalarProperty Name="VendorAnswerID" ColumnName="VendorAnswerID" />
+                <ScalarProperty Name="VendorQuestionID" ColumnName="VendorQuestionID" />
+                <ScalarProperty Name="VendorProductID" ColumnName="VendorProductID" />
+                <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+                <ScalarProperty Name="AnswerBeforeImport" ColumnName="AnswerBeforeImport" />
+                <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="VendorCommentToPCI" ColumnName="VendorCommentToPCI" />
+                <ScalarProperty Name="LastUpdateByVendorPCI" ColumnName="LastUpdateByVendorPCI" />
+                <ScalarProperty Name="LastUpdateDateVendorPCI" ColumnName="LastUpdateDateVendorPCI" />
+                <ScalarProperty Name="PCICommentToVendor" ColumnName="PCICommentToVendor" />
+                <ScalarProperty Name="LastUpdateByPCIVendor" ColumnName="LastUpdateByPCIVendor" />
+                <ScalarProperty Name="LastUpdateDatePCIVendor" ColumnName="LastUpdateDatePCIVendor" />
+                <ScalarProperty Name="VendorCommentToPlanSponsor" ColumnName="VendorCommentToPlanSponsor" />
+                <ScalarProperty Name="LastUpdateByVendorPlanSponsor" ColumnName="LastUpdateByVendorPlanSponsor" />
+                <ScalarProperty Name="LastUpdateDateVendorPlanSponsor" ColumnName="LastUpdateDateVendorPlanSponsor" />
+                <ScalarProperty Name="PCICommentToPlanSponsor" ColumnName="PCICommentToPlanSponsor" />
+                <ScalarProperty Name="LastUpdateByPCIPlanSponsor" ColumnName="LastUpdateByPCIPlanSponsor" />
+                <ScalarProperty Name="LastUpdateDatePCIPlanSponsor" ColumnName="LastUpdateDatePCIPlanSponsor" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorProducts">
+            <EntityTypeMapping TypeName="VSMModel.VendorProduct">
+              <MappingFragment StoreEntitySet="VendorProduct">
+                <ScalarProperty Name="VendorProductID" ColumnName="VendorProductID" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorQuestions">
+            <EntityTypeMapping TypeName="VSMModel.VendorQuestion">
+              <MappingFragment StoreEntitySet="VendorQuestions">
+                <ScalarProperty Name="VendorQuestionID" ColumnName="VendorQuestionID" />
+                <ScalarProperty Name="VendorQuestionCategoryID" ColumnName="VendorQuestionCategoryID" />
+                <ScalarProperty Name="QuestionDataTypeID" ColumnName="QuestionDataTypeID" />
+                <ScalarProperty Name="VendorQuestion1" ColumnName="VendorQuestion" />
+                <ScalarProperty Name="VendorVersion" ColumnName="VendorVersion" />
+                <ScalarProperty Name="ClientVersion" ColumnName="ClientVersion" />
+                <ScalarProperty Name="ReportLabel" ColumnName="ReportLabel" />
+                <ScalarProperty Name="VSM" ColumnName="VSM" />
+                <ScalarProperty Name="PCIComment" ColumnName="PCIComment" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="HideFromVendor" ColumnName="HideFromVendor" />
+                <ScalarProperty Name="TopQuestion" ColumnName="TopQuestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fees">
+            <EntityTypeMapping TypeName="VSMModel.Fee">
+              <MappingFragment StoreEntitySet="Fee">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="FeeDescription" ColumnName="FeeDescription" />
+                <ScalarProperty Name="PlanAssumptionID" ColumnName="PlanAssumptionID" />
+                <ScalarProperty Name="ParentFeeID" ColumnName="ParentFeeID" />
+                <ScalarProperty Name="FeeTypeID" ColumnName="FeeTypeID" />
+                <ScalarProperty Name="FeeCategoryID" ColumnName="FeeCategoryID" />
+                <ScalarProperty Name="FeeID" ColumnName="FeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrequentlyUsedProjectQuestions">
+            <EntityTypeMapping TypeName="VSMModel.FrequentlyUsedProjectQuestion">
+              <MappingFragment StoreEntitySet="FrequentlyUsedProjectQuestions">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="ReportLabel" ColumnName="ReportLabel" />
+                <ScalarProperty Name="VendorVersion" ColumnName="VendorVersion" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="QuestionDataTypeID" ColumnName="QuestionDataTypeID" />
+                <ScalarProperty Name="FrequentlyUsedProjectQuestionID" ColumnName="FrequentlyUsedProjectQuestionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvestmentAssumptions">
+            <EntityTypeMapping TypeName="VSMModel.InvestmentAssumption">
+              <MappingFragment StoreEntitySet="InvestmentAssumptions">
+                <ScalarProperty Name="IsTarget" ColumnName="IsTarget" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Participants" ColumnName="Participants" />
+                <ScalarProperty Name="Assets" ColumnName="Assets" />
+                <ScalarProperty Name="AssetSymbol" ColumnName="AssetSymbol" />
+                <ScalarProperty Name="AssetFund" ColumnName="AssetFund" />
+                <ScalarProperty Name="AssetClassID" ColumnName="AssetClassID" />
+                <ScalarProperty Name="InvestmentAssumptionID" ColumnName="InvestmentAssumptionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlanAssumptions">
+            <EntityTypeMapping TypeName="VSMModel.PlanAssumption">
+              <MappingFragment StoreEntitySet="PlanAssumptions">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Assumption" ColumnName="Assumption" />
+                <ScalarProperty Name="QuestionDataTypeID" ColumnName="QuestionDataTypeID" />
+                <ScalarProperty Name="VendorQuestionID" ColumnName="VendorQuestionID" />
+                <ScalarProperty Name="PlanAssumptionID" ColumnName="PlanAssumptionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorAssumptions">
+            <EntityTypeMapping TypeName="VSMModel.VendorAssumption">
+              <MappingFragment StoreEntitySet="VendorAssumptions">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="Assumption" ColumnName="Assumption" />
+                <ScalarProperty Name="QuestionDataTypeID" ColumnName="QuestionDataTypeID" />
+                <ScalarProperty Name="VendorAssumptionCategoryID" ColumnName="VendorAssumptionCategoryID" />
+                <ScalarProperty Name="VendorAssumptionID" ColumnName="VendorAssumptionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="VSPLegacy">
+        <EntityTypeShape EntityType="VSMModel.Vendor" Width="1.5" PointX="0.75" PointY="1.625" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSMModel.VendorAnswer" Width="1.5" PointX="5.25" PointY="1.125" Height="5.2494108072916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSMModel.VendorProduct" Width="1.5" PointX="3" PointY="2.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VSMModel.VendorQuestion" Width="1.5" PointX="3" PointY="6.875" Height="3.5186979166666656" IsExpanded="true" />
+        <AssociationConnector Association="VSMModel.FK_VendorProduct_Vendor" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.5862939453125" />
+          <ConnectorPoint PointX="3" PointY="3.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="VSMModel.FK_VendorAnswers_VendorProduct" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.5862939453125" />
+          <ConnectorPoint PointX="5.25" PointY="3.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="VSMModel.FK_VendorAnswers_VendorQuestions" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.875" />
+          <ConnectorPoint PointX="4.875" PointY="6.5" />
+          <ConnectorPoint PointX="4.875" PointY="6.7494108072916656" />
+          <ConnectorPoint PointX="5.25" PointY="6.3744108072916656" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="VSMModel.Fee" Width="1.5" PointX="7.5" PointY="7.125" Height="3.3263964843749996" />
+        <EntityTypeShape EntityType="VSMModel.FrequentlyUsedProjectQuestion" Width="1.5" PointX="7.375" PointY="0.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="VSMModel.InvestmentAssumption" Width="1.5" PointX="9.375" PointY="0.75" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="VSMModel.PlanAssumption" Width="1.5" PointX="5.25" PointY="7.5" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="VSMModel.VendorAssumption" Width="1.5" PointX="10.375" PointY="4.75" Height="2.1725878906249996" />
+        <AssociationConnector Association="VSMModel.FK_Fee_Fee" >
+          <ConnectorPoint PointX="8.0319230769230767" PointY="10.451396484375" />
+          <ConnectorPoint PointX="8.0319230769230767" PointY="10.701396484375" />
+          <ConnectorPoint PointX="8.47846153846154" PointY="10.701396484375" />
+          <ConnectorPoint PointX="8.47846153846154" PointY="10.451396484375" />
+        </AssociationConnector>
+        <AssociationConnector Association="VSMModel.FK_Fee_PlanAssumptions" >
+          <ConnectorPoint PointX="6.75" PointY="8.6824446614583337" />
+          <ConnectorPoint PointX="7.5" PointY="8.6824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="VSMModel.FK_PlanAssumptions_VendorQuestions" >
+          <ConnectorPoint PointX="4.5" PointY="8.6824446614583337" />
+          <ConnectorPoint PointX="5.25" PointY="8.6824446614583337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

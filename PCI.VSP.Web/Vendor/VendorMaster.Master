@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VendorMaster.master.cs" Inherits="PCI.VSP.Web.Vendor.VendorMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-size: x-large;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .style2
+        {
+            width: 261px;
+        }
+        .style3
+        {
+            width: 662px;
+        }
+        </style>
+</head>
+<body style="height: 437px">
+    <form id="form1" runat="server">
+    <div>
+   
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          <p></p>
+          <p class="style1">Pension Consulting Inc</p>
+          <p></p>
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="Div1" style="border:2px">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" EnableViewState="true" runat="server">
+    <table runat="server">
+        <tr><td colspan="2px" class="style2"><asp:ContentPlaceHolder ID="newCPH1" runat="server">
+            <p>
+                <br />
+            </p>
+            <p>
+                <asp:HyperLink id ="dashboard" runat="server">Dashboard</asp:HyperLink>&nbsp;</p>
+            <p>
+             <asp:HyperLink id ="profile" runat="server">Profile</asp:HyperLink>&nbsp;</p>
+            <p>
+             <asp:HyperLink id ="products" runat="server">Products</asp:HyperLink>&nbsp;</p>
+            <p>
+             <asp:HyperLink id ="clientenquiries" runat="server">Client Enquiries</asp:HyperLink>&nbsp;</p>
+            <p style="height: 36px">
+             <asp:HyperLink id ="usermanagement" runat="server">User Management</asp:HyperLink>&nbsp;</p>
+            </asp:ContentPlaceHolder>               </td>
+            <td colspan="2px" class="style3"><asp:ContentPlaceHolder ID="newCPH3" runat="server"></asp:ContentPlaceHolder></td></tr>
+    </table>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PCI.VSP.Data.CRM.DataLogic.DataObjectBase&lt;TDataObject, TDataKey&gt;">
+    <Position X="1" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAQAAAAAAAA=</HashCode>
+      <FileName>CRM\DataLogic\ServiceObjectBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCI.VSP.Data.CRM.DataLogic.ServiceObjectBase&lt;TDataObject, TDataKey&gt;">
+    <Position X="1" Y="3.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAEABAAAQAAAAAAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRM\DataLogic\ServiceObjectBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCI.VSP.Data.CRM.Model.VendorQuestion">
+    <Position X="4.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCAAEAAAAAgAQAAAAAAUAAAAACABkAAIBAgQIAAA=</HashCode>
+      <FileName>CRM\Model\VendorQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCI.VSP.Data.CRM.Model.Question">
+    <Position X="7" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgQACAAABAAAAAACAAAIAAQAAAAAAAAgEAABAAQAAAA=</HashCode>
+      <FileName>CRM\Model\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCI.VSP.Data.CRM.Model.ClientQuestion">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCCAAEAAAAAgAAgAAAAAQAAAAACABgECAAAgQAAAA=</HashCode>
+      <FileName>CRM\Model\ClientQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PCI.VSP.Data.CRM.Model.ProjectVendor">
+    <Position X="11.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CRM\Model\ProjectVendor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

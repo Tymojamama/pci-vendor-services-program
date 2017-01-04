@@ -1,0 +1,3 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CrmIFrames/VendorMonitoring/VMMaster.master" AutoEventWireup="true" CodeBehind="Estimates.aspx.cs" Inherits="PCI.VSP.Web.CrmIFrames.VendorMonitoring.Estimates" %>
+<%@ MasterType VirtualPath="~/CrmIFrames/VendorMonitoring/VMMaster.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">Vendor Monitoring Estimates:</asp:Content>

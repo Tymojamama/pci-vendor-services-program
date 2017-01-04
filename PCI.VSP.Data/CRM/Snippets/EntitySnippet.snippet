@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Entity Property Snippet</Title>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>CrmAttributeName</ID>
+          <Default>"Crm Attribute Name"</Default>
+          <ToolTip>Case-sensitve name of the CRM attribute for the CRM entity.</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Default>PropertyName</Default>
+          <ToolTip>The name to uniquely identify this property with .NET.</ToolTip>
+        </Literal>
+        <Object>
+          <ID>CrmDataType</ID>
+          <Type>PCI.VSP.Data.CRM.Model.EntityBase.PropertyType</Type>
+          <ToolTip>Data type used to map the attribute to the CRM attribute.</ToolTip>
+          <Default>PropertyType.String</Default>
+        </Object>
+        <Object>
+          <ID>DotNetDataType</ID>
+          <Type>System.Type</Type>
+          <ToolTip>.NET Data Type for this property.</ToolTip>
+          <Default>String</Default>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+        public $DotNetDataType$ $PropertyName$
+        {
+          get { return base.GetPropertyValue<$DotNetDataType$>($CrmAttributeName$, $CrmDataType$, ""); }
+          set { base.SetPropertyValue<$DotNetDataType$>($CrmAttributeName$, $CrmDataType$, value); }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

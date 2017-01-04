@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Deployment\Release\</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/ChangePassword.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Account/ChangePasswordSuccess.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Account/ChangeSecurityQuestion.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Account/Login.aspx">
+      <publishTime>11/05/2015 08:19:10</publishTime>
+    </File>
+    <File Include="Account/Logout.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Account/PasswordRecovery.aspx">
+      <publishTime>11/04/2015 16:54:03</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Admin/Dashboard.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="AnonymousSite.Master">
+      <publishTime>11/05/2015 09:04:05</publishTime>
+    </File>
+    <File Include="bin/microsoft.crm.sdk.dll">
+      <publishTime>11/04/2015 11:36:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Crm.SdkTypeProxy.dll">
+      <publishTime>11/04/2015 11:36:02</publishTime>
+    </File>
+    <File Include="bin/PCI.VSP.Data.dll">
+      <publishTime>11/05/2015 10:16:51</publishTime>
+    </File>
+    <File Include="bin/PCI.VSP.Services.dll">
+      <publishTime>11/05/2015 10:16:52</publishTime>
+    </File>
+    <File Include="bin/PCI.VSP.Web.dll">
+      <publishTime>11/05/2015 10:16:54</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>11/04/2015 11:36:21</publishTime>
+    </File>
+    <File Include="Controls/Comment.ascx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Controls/InvestmentAssumptionsControl.ascx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Controls/QAUserControl.ascx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="Controls/RevenueSharingControl.ascx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/Filter.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/FilterPhase2.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/PCIComments.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/PCI_ClientQuestions.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/QuestionSetup.aspx">
+      <publishTime>11/04/2015 11:35:54</publishTime>
+    </File>
+    <File Include="CrmIFrames/VendorMonitoring/Actuals.aspx">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="CrmIFrames/VendorMonitoring/Estimates.aspx">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="CrmIFrames/VendorMonitoring/VMMaster.master">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="CrmIFrames/Web.config">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>11/04/2015 11:35:53</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>11/04/2015 11:35:53</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/04/2015 11:35:53</publishTime>
+    </File>
+    <File Include="images/background.png">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="images/banner.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/clientinquiries.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/comment.png">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="images/contentheader.png">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="images/dashboard.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/documenttemplate.png">
+      <publishTime>11/04/2015 11:35:55</publishTime>
+    </File>
+    <File Include="images/files.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/footerbackground.png">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="images/headerbackground.png">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="images/no-comment.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/pcilogo.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/selectedbutton.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/silverline.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/unselectedbutton.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/usermanagement.png">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="images/vendorproducts.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/vendorprofile.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/vsplogo.png">
+      <publishTime>11/04/2015 11:35:56</publishTime>
+    </File>
+    <File Include="images/Web.config">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.2.min.js">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.9.ui.min.js">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Scripts/LoadingWindow.js">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="Scripts/ModalWindow.js">
+      <publishTime>11/04/2015 11:35:57</publishTime>
+    </File>
+    <File Include="Scripts/Web.config">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>11/05/2015 08:30:52</publishTime>
+    </File>
+    <File Include="SiteBase.Master">
+      <publishTime>11/04/2015 11:35:53</publishTime>
+    </File>
+    <File Include="Styles/Master.css">
+      <publishTime>11/05/2015 08:53:54</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>11/05/2015 08:51:29</publishTime>
+    </File>
+    <File Include="Styles/Web.config">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Vendor/Admin/UserManagement.aspx">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="Vendor/Admin/Web.config">
+      <publishTime>11/04/2015 11:36:00</publishTime>
+    </File>
+    <File Include="Vendor/CommentsDialog.aspx">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Vendor/Dashboard.aspx">
+      <publishTime>11/05/2015 08:21:15</publishTime>
+    </File>
+    <File Include="Vendor/DownloadNote.ashx">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Vendor/Products.aspx">
+      <publishTime>11/04/2015 11:35:58</publishTime>
+    </File>
+    <File Include="Vendor/ProfileDialog.aspx">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="Vendor/ProjectInquiries.aspx">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="Vendor/ProjectInquiriesDialog.aspx">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="Vendor/VendorProductQuestionsDialog.aspx">
+      <publishTime>11/04/2015 11:35:59</publishTime>
+    </File>
+    <File Include="Vendor/Web.config">
+      <publishTime>11/04/2015 11:36:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/05/2015 10:16:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

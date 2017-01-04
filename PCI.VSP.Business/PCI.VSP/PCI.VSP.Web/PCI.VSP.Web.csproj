@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DEC408C-3324-4D41-AFEE-F3247430BB61}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCI.VSP.Web</RootNamespace>
+    <AssemblyName>PCI.VSP.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="microsoft.crm.sdk, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\microsoft.crm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI, Version=2011.3.1305.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\ChangeSecurityQuestion.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\PasswordRecovery.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Controls\Comment.ascx" />
+    <Content Include="CrmIFrames\PCIComments.aspx" />
+    <Content Include="Controls\InvestmentAssumptionsControl.ascx" />
+    <Content Include="Controls\QAUserControl.ascx" />
+    <Content Include="Controls\RevenueSharingControl.ascx" />
+    <Content Include="CrmIFrames\Filter.aspx" />
+    <Content Include="CrmIFrames\FilterPhase2.aspx" />
+    <Content Include="CrmIFrames\PCI_ClientQuestions.aspx" />
+    <Content Include="CrmIFrames\QuestionSetup.aspx" />
+    <Content Include="CrmIFrames\VendorMonitoring\Actuals.aspx" />
+    <Content Include="CrmIFrames\VendorMonitoring\Estimates.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="images\background.png" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\clientinquiries.png" />
+    <Content Include="images\comment.png" />
+    <Content Include="images\contentheader.png" />
+    <Content Include="images\dashboard.png" />
+    <Content Include="images\documenttemplate.png" />
+    <Content Include="images\files.png" />
+    <Content Include="images\footerbackground.png" />
+    <Content Include="images\headerbackground.png" />
+    <Content Include="images\no-comment.png" />
+    <Content Include="images\pcilogo.png" />
+    <Content Include="images\selectedbutton.png" />
+    <Content Include="images\silverline.png" />
+    <Content Include="images\unselectedbutton.png" />
+    <Content Include="images\usermanagement.png" />
+    <Content Include="images\vendorproducts.png" />
+    <Content Include="images\vendorprofile.png" />
+    <Content Include="images\vsplogo.png" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.9.ui.min.js" />
+    <Content Include="Scripts\LoadingWindow.js" />
+    <Content Include="Scripts\ModalWindow.js" />
+    <Content Include="Styles\Master.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Vendor\CommentsDialog.aspx" />
+    <Content Include="Vendor\ProjectInquiries.aspx" />
+    <Content Include="Vendor\ProjectInquiriesDialog.aspx" />
+    <Content Include="Vendor\Admin\UserManagement.aspx" />
+    <Content Include="Vendor\Dashboard.aspx" />
+    <Content Include="Vendor\Products.aspx" />
+    <Content Include="Vendor\ProfileDialog.aspx" />
+    <Content Include="Vendor\VendorProductQuestionsDialog.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangeSecurityQuestion.aspx.cs">
+      <DependentUpon>ChangeSecurityQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangeSecurityQuestion.aspx.designer.cs">
+      <DependentUpon>ChangeSecurityQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Comment.ascx.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Comment.ascx.designer.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\PCIComments.aspx.cs">
+      <DependentUpon>PCIComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\PCIComments.aspx.designer.cs">
+      <DependentUpon>PCIComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Constants.cs" />
+    <Compile Include="classes\Enums.cs" />
+    <Compile Include="Controls\InvestmentAssumptionsControl.ascx.cs">
+      <DependentUpon>InvestmentAssumptionsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InvestmentAssumptionsControl.ascx.designer.cs">
+      <DependentUpon>InvestmentAssumptionsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QAUserControl.ascx.cs">
+      <DependentUpon>QAUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QAUserControl.ascx.designer.cs">
+      <DependentUpon>QAUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RevenueSharingControl.ascx.cs">
+      <DependentUpon>RevenueSharingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RevenueSharingControl.ascx.designer.cs">
+      <DependentUpon>RevenueSharingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\Filter.aspx.cs">
+      <DependentUpon>Filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\Filter.aspx.designer.cs">
+      <DependentUpon>Filter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\FilterPhase2.aspx.cs">
+      <DependentUpon>FilterPhase2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\FilterPhase2.aspx.designer.cs">
+      <DependentUpon>FilterPhase2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\Model\ComparisonMatrix.cs" />
+    <Compile Include="CrmIFrames\Model\ComparisonTypes.cs" />
+    <Compile Include="CrmIFrames\Model\FilterCriteria.cs" />
+    <Compile Include="CrmIFrames\PCI_ClientQuestions.aspx.cs">
+      <DependentUpon>PCI_ClientQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\PCI_ClientQuestions.aspx.designer.cs">
+      <DependentUpon>PCI_ClientQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\QuestionSetup.aspx.cs">
+      <DependentUpon>QuestionSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\QuestionSetup.aspx.designer.cs">
+      <DependentUpon>QuestionSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\Model\ClientResponseType.cs" />
+    <Compile Include="CrmIFrames\Model\QuestionDataType.cs" />
+    <Compile Include="CrmIFrames\Model\VendorResponseType.cs" />
+    <Compile Include="CrmIFrames\VendorMonitoring\Actuals.aspx.cs">
+      <DependentUpon>Actuals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\VendorMonitoring\Actuals.aspx.designer.cs">
+      <DependentUpon>Actuals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\VendorMonitoring\Estimates.aspx.cs">
+      <DependentUpon>Estimates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\VendorMonitoring\Estimates.aspx.designer.cs">
+      <DependentUpon>Estimates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrmIFrames\VendorMonitoring\PopulateQAControlEventArgs.cs" />
+    <Compile Include="CrmIFrames\VendorMonitoring\VMMaster.master.cs">
+      <DependentUpon>VMMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrmIFrames\VendorMonitoring\VMMaster.master.designer.cs">
+      <DependentUpon>VMMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Utility.cs" />
+    <Compile Include="Security\VspMembershipProvider.cs" />
+    <Compile Include="Security\VspMembershipUser.cs" />
+    <Compile Include="Security\VspRoleProvider.cs" />
+    <Compile Include="classes\Utilities.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AnonymousSite.Master.cs">
+      <DependentUpon>AnonymousSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnonymousSite.Master.designer.cs">
+      <DependentUpon>AnonymousSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteBase.Master.cs">
+      <DependentUpon>SiteBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteBase.Master.designer.cs">
+      <DependentUpon>SiteBase.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\CommentsDialog.aspx.cs">
+      <DependentUpon>CommentsDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\CommentsDialog.aspx.designer.cs">
+      <DependentUpon>CommentsDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\DownloadNote.ashx.cs">
+      <DependentUpon>DownloadNote.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ProjectInquiries.aspx.cs">
+      <DependentUpon>ProjectInquiries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ProjectInquiries.aspx.designer.cs">
+      <DependentUpon>ProjectInquiries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ProjectInquiriesDialog.aspx.cs">
+      <DependentUpon>ProjectInquiriesDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ProjectInquiriesDialog.aspx.designer.cs">
+      <DependentUpon>ProjectInquiriesDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\Admin\UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\Admin\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ProfileDialog.aspx.cs">
+      <DependentUpon>ProfileDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ProfileDialog.aspx.designer.cs">
+      <DependentUpon>ProfileDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\VendorProductQuestionsDialog.aspx.cs">
+      <DependentUpon>VendorProductQuestionsDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\VendorProductQuestionsDialog.aspx.designer.cs">
+      <DependentUpon>VendorProductQuestionsDialog.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CrmIFrames\Web.config" />
+    <Content Include="images\Web.config" />
+    <Content Include="CrmIFrames\VendorMonitoring\VMMaster.master" />
+    <None Include="Properties\PublishProfiles\PCIVSP.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Vendor\Web.config" />
+    <Content Include="Vendor\Admin\Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="AnonymousSite.Master" />
+    <Content Include="SiteBase.Master" />
+    <None Include="test.pdf" />
+    <Content Include="Vendor\DownloadNote.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PCI.VSP.Data\PCI.VSP.Data.csproj">
+      <Project>{fd784057-7400-4cd1-b3f8-0009b7c65f73}</Project>
+      <Name>PCI.VSP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCI.VSP.Services\PCI.VSP.Services.csproj">
+      <Project>{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}</Project>
+      <Name>PCI.VSP.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63525</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

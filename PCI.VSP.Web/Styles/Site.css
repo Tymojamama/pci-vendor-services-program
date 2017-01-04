@@ -1,0 +1,567 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+a:link, a:visited {
+    /* color: #034af3; */
+    color: #17366F;
+}
+
+a:hover {
+    color: #AF3E36;
+    /* color: #1d60ff; */
+    text-decoration: none;
+}
+
+a:active {
+    color: #034af3;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+.clear {
+    clear:both;
+}
+
+/*  GENERAL CHILD PAGE CLASSES */
+
+.contentheader {
+    font-family: Verdana; 
+    max-width: 100%;
+    margin-top: 25px;
+}
+
+.contentheadertext {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    color: #0e2e47;
+    font-size: 38px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+}
+
+.contentheadersubtext {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #494a4b;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+.contentsubheader {
+    font-size: 16px; 
+    color: #0e2e47;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content-options {
+    background-color: #da383c;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.silverdivider
+{
+    width: 100%;
+    height: 2px;
+    background-color: #a3a8aa;
+}
+
+.contentgridviewcontainer {
+    width: 100%; 
+    max-width: 100%;
+    margin-top: 18px;
+}
+
+.contentgridviewcontainer a
+{
+    text-decoration:none;
+    color: #17366F;
+}
+
+.view-more-container {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    padding-top: 15px;
+}
+
+.view-more {
+    display: inline-block;
+}
+
+.view-more p {
+    color: #000000;
+    line-height: 30px;
+    margin: 0;
+}
+
+.view-more a
+{
+    text-decoration:none;
+    color: #17366F;
+}
+
+.button {
+    margin: 5px 0;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #cacaca;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+#repeatertable
+{
+    background-color: White;
+    color: Black;
+    border-bottom: 1px solid Black;
+    border-left: 1px solid Black;
+}
+
+#repeatertable tr td
+{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.drop-down-list {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+    max-width: 100%;
+    background-color: #f1f4f6;
+    border: 1px solid #ccc;
+}
+
+.drop-down-list:hover {
+    border: 1px solid #0e2e47;
+}
+
+/* TABLE DESIGN
+----------------------------------------------------------*/
+
+.grid-view-default {
+    border: 1px solid #a3a8aa;
+    border-radius: 5px;
+}
+
+.table-header {
+    background-color: #da383c;
+    color: #f1f4f6
+}
+
+.table-button {
+    background-color: #ffffff;
+    color: #0e2e47;
+    font-weight: 600;
+    text-align: center;
+}
+
+.table-button:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.body-block-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 100%;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label {
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    max-width: 100%;
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.login {
+    margin: 0 auto;
+    width: 400px;
+    max-width: 90%;
+    border: 1px solid #a3a8aa;
+    border-radius: 5px;
+    margin-top: 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+div.login-header {
+    border-bottom: 1px solid #a3a8aa;
+    padding-left: 15px;
+    height: 37px;
+    line-height: 37px;
+    background-color: #da383c;
+    color: #f1f4f6;
+    font-size: 16px;
+    cursor: default;
+}
+
+div.login-body {
+    margin-left: 20px;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+.login-text {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-button {
+    margin: 5px 0;
+    height: 30px;
+    width: 65px;
+    border: 1px solid #cacaca;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.login-button:hover {
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+.login-fieldset {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    line-height: 20px;
+}
+
+.login-notification-area {
+    border-top: 1px solid #a3a8aa;
+    width: 100%;
+}
+
+.login-failure-area {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.blackOut
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+    -moz-opacity: 0.50;
+    z-index: 101;
+}
+.ModalWindow
+{
+    position: absolute;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #D1D1D1;
+    z-index: 102;
+    border-image: initial;
+    margin: 0px auto;
+}
+
+.ModalWindowContent
+{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    border: solid 1px black;
+    border-image: initial;
+    height:100%;
+    width:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.small-width {
+    width: 1000px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.submitButton {
+    width: 94%;
+    text-align: right;
+    padding-right: 10px;
+    float: right;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .small-width {
+        width: 750px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .small-width {
+        width: 450px;
+    }
+
+}

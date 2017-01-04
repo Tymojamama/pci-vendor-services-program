@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{3CB953A9-A1C1-4B41-9340-341FD73F048C}"
+	ProjectSection(SolutionItems) = preProject
+		References\MetadataService.xml = References\MetadataService.xml
+		References\microsoft.crm.sdk.dll = References\microsoft.crm.sdk.dll
+		References\microsoft.crm.sdk.proxy.dll = References\microsoft.crm.sdk.proxy.dll
+		References\microsoft.crm.sdktypeproxy.dll = References\microsoft.crm.sdktypeproxy.dll
+		References\microsoft.xrm.sdk.dll = References\microsoft.xrm.sdk.dll
+		References\Telerik.Web.UI.dll = References\Telerik.Web.UI.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEC85C68-F12E-4658-AAE8-9326E784BD76}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		PCI.VSP.vsmdi = PCI.VSP.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCI.VSP.Data", "PCI.VSP.Data\PCI.VSP.Data.csproj", "{FD784057-7400-4CD1-B3F8-0009B7C65F73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCI.VSP.Web", "PCI.VSP.Web\PCI.VSP.Web.csproj", "{2DEC408C-3324-4D41-AFEE-F3247430BB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCI.VSP.Services", "PCI.VSP.Services\PCI.VSP.Services.csproj", "{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCI.VSP.Business", "PCI.VSP.Business\PCI.VSP.Business.csproj", "{D9F11FA3-F847-48A6-8410-74DA53596515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{044433F2-45C0-48C5-B742-0E51913B14FA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://pension-consultants.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = PCI.VSP.Data\\PCI.VSP.Data.csproj
+		SccProjectName0 = PCI.VSP.Data
+		SccAuxPath0 = https://pension-consultants.visualstudio.com/defaultcollection
+		SccLocalPath0 = PCI.VSP.Data
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = PCI.VSP.Services\\PCI.VSP.Services.csproj
+		SccProjectName1 = PCI.VSP.Services
+		SccAuxPath1 = https://pension-consultants.visualstudio.com/defaultcollection
+		SccLocalPath1 = PCI.VSP.Services
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = PCI.VSP.Web\\PCI.VSP.Web.csproj
+		SccProjectName2 = PCI.VSP.Web
+		SccAuxPath2 = https://pension-consultants.visualstudio.com/defaultcollection
+		SccLocalPath2 = PCI.VSP.Web
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = PCI.VSP.Business\\PCI.VSP.Business.csproj
+		SccProjectName3 = PCI.VSP.Business
+		SccAuxPath3 = https://pension-consultants.visualstudio.com/defaultcollection
+		SccLocalPath3 = PCI.VSP.Business
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FD784057-7400-4CD1-B3F8-0009B7C65F73}.Release|x86.ActiveCfg = Release|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2DEC408C-3324-4D41-AFEE-F3247430BB61}.Release|x86.ActiveCfg = Release|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6834B3F2-DB91-4238-AD9D-A9D331C1E94B}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D9F11FA3-F847-48A6-8410-74DA53596515}.Release|x86.ActiveCfg = Release|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{044433F2-45C0-48C5-B742-0E51913B14FA}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = PCI.VSP.vsmdi
+	EndGlobalSection
+EndGlobal

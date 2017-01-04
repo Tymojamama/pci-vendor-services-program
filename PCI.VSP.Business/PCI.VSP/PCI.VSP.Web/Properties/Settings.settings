@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PCI.VSP.Web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CRMDeploymentType" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="CRMDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TRICENSION</Value>
+    </Setting>
+    <Setting Name="CRMUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">house.account</Value>
+    </Setting>
+    <Setting Name="CRMPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">P@ssword1</Value>
+    </Setting>
+    <Setting Name="CRMUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://pensionconsultinginc.tricension.net/MSCRMServices/2007/SPLA/CrmDiscoveryService.asmx</Value>
+    </Setting>
+    <Setting Name="CRMOrganization" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PensionConsultingInc</Value>
+    </Setting>
+    <Setting Name="DefaultVendorResponseTypes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Single Value&lt;/string&gt;
+  &lt;string&gt;Multi-Value&lt;/string&gt;
+  &lt;string&gt;Range&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultClientResponseTypes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Single Value&lt;/string&gt;
+  &lt;string&gt;Multi-Value&lt;/string&gt;
+  &lt;string&gt;Range&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultQuestionDataTypes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Integer&lt;/string&gt;
+  &lt;string&gt;Text&lt;/string&gt;
+  &lt;string&gt;Yes/No&lt;/string&gt;
+  &lt;string&gt;Money&lt;/string&gt;
+  &lt;string&gt;Choice&lt;/string&gt;
+  &lt;string&gt;Date&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultComparisonTypes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Equal To&lt;/string&gt;
+  &lt;string&gt;Greater Than or Equal To&lt;/string&gt;
+  &lt;string&gt;Less Than or Equal To&lt;/string&gt;
+  &lt;string&gt;Within Range&lt;/string&gt;
+  &lt;string&gt;Complete Match&lt;/string&gt;
+  &lt;string&gt;Any Match&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

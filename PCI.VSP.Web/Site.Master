@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PCI.VSP.Web.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Vendor Services Program | Pension Consultants, Inc.</title>
+    <link href="<%= ResolveClientUrl("~/Styles/Site.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveClientUrl("~/Styles/Master.css") %>" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src='<%= ResolveClientUrl("~/scripts/jquery-1.7.2.min.js") %>'></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div id="main-container">
+        <div id="main-header-background">
+            <div id="main-header-container">
+                <div id="main-header-logos">
+                    <img id="pci-logo" alt="PCI" src="<%= ResolveClientUrl("~/images/pcilogo.png") %>"/>
+                    <div id="main-header-menu">
+                        <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="VendorAdmin,VendorAgent">
+                                    <ContentTemplate>
+                                        <div class="main-header-menu-item" onclick="location.replace('<%= ResolveClientUrl("~/Default.aspx") %>')">
+                                            <p>Home</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/ProfileDialog.aspx") %>')">
+                                            <p>Profile</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/Products.aspx") %>')">
+                                            <p>Products</p>
+                                        </div>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/ProjectInquiries.aspx") %>')">
+                                            <p>Inquiries</p>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <asp:LoginView ID="NavLoginView2" runat="server" EnableViewState="false">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="VendorAdmin,SystemUser">
+                                    <ContentTemplate>
+                                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Vendor/Admin/UserManagement.aspx") %>')">
+                                            <p>Users</p>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <div class="main-header-menu-item"  onclick="location.replace('<%= ResolveClientUrl("~/Account/Logout.aspx") %>')">
+                            <p>Log Out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="NavLoginViewDiv">
+                <asp:ContentPlaceHolder ID="NavContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+    <div class="small-width">
+        <div id="main-footer">
+            <div id="main-footer-content">
+                <p class="main-footer-contact">
+                    300 South Campbell | Springfield, MO 65806 | T 417.889.4918 | toll free 800.234.9584 | F 417.889.9962 | www.pension-consultants.com
+                </p>
+                <p class="main-footer-disclosure">
+                    ©<%= DateTime.Now.Year %> Pension Consultants, Inc. All Rights Reserved. Pension Consultants, 
+                    Inc. is registered with U.S. Securities and Exchange Commission as an investment adviser.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
