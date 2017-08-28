@@ -8,3 +8,11 @@ C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\bin\Debug\PC
 C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.csprojResolveAssemblyReference.cache
 C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.dll
 C:\Users\zallen\Documents\Local Git Repository\VSP\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.pdb
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\bin\Debug\PCI.VSP.Services.dll.config
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\bin\Debug\microsoft.crm.sdk.dll
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\bin\Debug\microsoft.crm.sdktypeproxy.dll
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\bin\Debug\PCI.VSP.Data.dll
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\bin\Debug\PCI.VSP.Data.pdb
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.csprojResolveAssemblyReference.cache
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.dll
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Services\obj\Debug\PCI.VSP.Services.pdb
