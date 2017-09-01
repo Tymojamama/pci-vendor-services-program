@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-/**
- *
- * <Summary>
- *  Setting the constant class names to the propper location names
- * </Summary>
- *
- **/
 namespace PCI.VSP.Data.Classes
 {
     public static class DataConstants
