@@ -23,3 +23,4 @@ U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Web\bin\PCI.VSP.Services.pdb
 U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Web\obj\Debug\PCI.VSP.Web.csprojResolveAssemblyReference.cache
 U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Web\obj\Debug\PCI.VSP.Web.dll
 U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Web\obj\Debug\PCI.VSP.Web.pdb
+U:\PCI-Repos\pci-vendor-services-program\PCI.VSP.Web\bin\PCI.VSP.Web.dll.config

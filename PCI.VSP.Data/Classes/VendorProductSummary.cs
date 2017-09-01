@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/**
+ * <Summary>
+ *  Setting the default instance of the Vendor product summary
+ *  Setting the class to the default setup
+ * </Summary>
+ **/
 namespace PCI.VSP.Data.Classes
 {
     public class VendorProductSummary
